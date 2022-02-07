@@ -5,8 +5,74 @@
     <meta charset="utf-8">
     <title>Exercise</title>
     <meta name="description" content="A simple HTML page">
+    <meta content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,width=device-width" name="viewport">
     <style>
-        
+        @media (max-width: 500px) {
+           body {
+               min-width: none;
+            }
+
+            section#responsive {
+                padding: 0 20px;
+            }
+
+            section {
+                
+                background-color: black;
+            }
+
+            body .header-box img {
+                height: 58vw;
+                width: inherit;
+                padding: 0 2px;
+                
+            }
+
+            div.my-list {
+                
+                
+            }
+
+           .header-box .header-right {
+               width: 100%;
+               padding: 0;
+           }
+
+           body .header-box {
+                width: 100%;
+           }
+
+           body .header-box p{
+               width: none;
+               margin: 1rem 1rem;
+           }
+
+           body .img-back {
+               height: 60vw;
+               margin: 0 20px;
+               width: 100%;
+               min-width: 100%;
+               padding: 0 5px;
+               
+           }
+
+           .my-list ul {
+               padding: 0 10px;
+           }
+
+            .my-list li {
+                width: 100%;
+                padding: 0;
+            }
+
+            section.my-list {
+                background-color: rgb(119, 0, 159);
+            }
+
+            
+           
+        }
+
         @media (max-width: 1040px){
             
 
@@ -17,6 +83,7 @@
                 width: 100%;
                 
             }
+
 
             body #top {
                 display: block;
@@ -48,6 +115,9 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: rgb(119, 0, 159);
             text-align: center;
+        }
+        section {
+            width: none;
         }
 
         code {
@@ -216,7 +286,7 @@
 <!-- The rest of your HTML code is here -->
 
 <body>
-    <section>
+    <section id="responsive">
         <div class="header-box">
             <h1 id="top">MY APP</h1>
             <div class="img-back">
@@ -233,23 +303,23 @@
         </div>
     </section>
 
-    <section>
-        <div>
+    <section class="my-list">
+        <div class="my-list">
             <h2>My List</h2>
             <ul>
-                
+        
                 <li>
                     <div class="photo-back">
                         <img src="https://www.svgrepo.com/show/26996/avatar.svg" alt="alt-avatar" />
                     </div>
                     <div class="content">
-                    <p>My First Thing</p>
-                    <p>
-                        Lorem ipsum is placeholder text commonly used in the graphic,
-                        print, and publishing industries for previewing layouts and
-                        visual mockups.
-                    </p>
-                    <p>01/01/2020</p>
+                        <p>My First Thing</p>
+                        <p>
+                            Lorem ipsum is placeholder text commonly used in the graphic,
+                            print, and publishing industries for previewing layouts and
+                            visual mockups.
+                        </p>
+                        <p>01/01/2020</p>
                     </div>
                 </li>
                 <li>
@@ -351,7 +421,7 @@
                     </div>
                 </li>
             </ul>
-
+        
             <button class="body-btn">Test Now</button>
         </div>
     </section>
